@@ -1,8 +1,13 @@
+.todoListMain{
+  position: relative;
+  top: 40px;
+  z-index: 4;
+}
 .todoListMain .header {
   position: fixed;
   z-index:10;
   background-color: #66CCFF;
-  top: 70px;
+  top: 37px;
 }
 .todoListMain .header input {
   position: inherit;
@@ -33,7 +38,7 @@
   list-style: none;
   padding-left: 0;
   width: 250px;
-  top: 350px;
+  /* top: 650px; */
 }
 
 .todoListMain .theList li{

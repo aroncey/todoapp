@@ -22,7 +22,7 @@ class TodoList extends Component {
     var itemArray = this.state.items;
 
     if(this._inputElement.value !== ""){
-      itemArray.unshift({
+      itemArray.push({
         text: this._inputElement.value,
         key: Date.now(),
         Date: todayDate
@@ -45,27 +45,25 @@ class TodoList extends Component {
     //2. html for form
     //3. modification of element in itemArray
     //4. setState with new variable containing modified array
-    debugger
-    var itemArray = this.state.items;
-    var valueOfTask = "Please Edit Value of Task";
-    var updateditem, newInput;
-
-    //---- second attemp ---
-    var  valueInputPrompt = () => {
-            var value = prompt('Please Edit the task',valueOfTask);
-            if (value != null && value != "") {
-              newInput = value;
-            };
-          }
-    for(var i=0;itemArray.length>i ;i++){
-      debugger;
-      itemArray;
-      var tempObj = {};
-      if(itemArray[i].key === key){
-        itemArray[i]
-        tempObj = itemArray[i]
-      }
-    }
+      // var itemArray = this.state.items;
+      // var valueOfTask = "Please Edit Value of Task";
+      // var updateditem, newInput;
+      //
+      // //---- second attemp ---
+      // var  valueInputPrompt = () => {
+      //         var value = prompt('Please Edit the task',valueOfTask);
+      //         if (value != null && value != "") {
+      //           newInput = value;
+      //         };
+      //       }
+      // for(var i=0;itemArray.length>i ;i++){
+      //   itemArray;
+      //   var tempObj = {};
+      //   if(itemArray[i].key === key){
+      //     itemArray[i]
+      //     tempObj = itemArray[i]
+      //   }
+      // }
 
     // function valueInputPrompt() {
     //         var value = prompt('Please Edit the task',valueOfTask);
@@ -110,9 +108,9 @@ class TodoList extends Component {
         console.log(this.state)
 */
 
-      this.setState({
-        items: itemArray
-      });
+      // this.setState({
+      //   items: itemArray
+      // });
   };
 
   deleteItem(key){
