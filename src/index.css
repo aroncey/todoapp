@@ -1,0 +1,48 @@
+body{
+  padding: 50px;
+  background-color: #66CCFF;
+  font-family: sans-serif;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+}
+h1{
+  margin: 0px !important;
+  height: 72px;
+  width: 300px;
+}
+header{
+  background-color: #66CCFF;
+  position: fixed;
+  text-align: center;
+  font-size: 30px;
+  padding: 0px;
+  z-index:11;
+  top: 0px;
+  margin:0 !important;
+  height: 72px;
+}
+
+li{
+  z-index: 5;
+}
+
+.deleteImg {
+  position: absolute;
+  height: 14px;
+  left: 90%;
+  z-index: 5;
+}
+
+.editLi{
+  position: absolute;
+  height: 14px;
+  left: 70%;
+  z-index: 10;
+}
+
+.itemText:hover{
+  color:red;
+}

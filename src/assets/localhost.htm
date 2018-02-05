@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+  <link href="chrome-extension://lnkdbjbjpnpjeciipoaflmpcddinpjjp/mytube.css" rel="stylesheet" type="text/css"><script src="chrome-extension://lnkdbjbjpnpjeciipoaflmpcddinpjjp/mutationObserver.js"></script><script src="chrome-extension://lnkdbjbjpnpjeciipoaflmpcddinpjjp/mytube.js"></script><style type="text/css">body{
+  padding: 0px 50px 50px 50px ;
+  background-color: #66CCFF;
+  font-family: sans-serif;
+}
+
+#container{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+header{
+  text-align: center;
+  font-size: 30px;
+  padding: 0px;
+  top:1px;
+  position: absolute;
+}
+
+.form{
+  text-align: center;
+  font-size: 30px;
+  padding: 0px;
+  top:1px;
+  position: absolute;
+}
+
+li{
+  z-index: 1;
+}
+
+.deleteImg {
+  position: absolute;
+  height: 14px;
+  left: 90%;
+  z-index: 10;
+}
+
+.editLi{
+  position: absolute;
+  height: 14px;
+  left: 70%;
+  z-index: 10;
+}
+
+.itemText:hover{
+  color:red;
+}
+</style><style type="text/css">.appTitle{
+  position: fixed;
+  left: 3%;
+  top:0%;
+  padding: 10px;
+
+}
+
+.todoListMain .header {
+  position: fixed;
+  padding: 10px;
+  font-size: 16px;
+  left:3%;
+  top:100px;
+}
+
+.todoListMain .header input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  width: 165px;
+}
+
+.todoListMain .header button{
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  background-color: #0066FF;
+  color: #FFF;
+  border: 2px solid #0066FF;
+}
+
+.todoListMain .header button:hover{
+  background-color: #003399;
+  border: 2px solid #003399;
+  cursor: pointer;
+}
+
+.todoListMain .theList{
+  position: absolute;
+  top:60px;
+  list-style: none;
+  padding-left: 6px;
+  width: 250px;
+}
+
+.todoListMain .theList li{
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  -webkit-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+
+.todoListMain .theList li:hover{
+  background-color: #0066FF;
+  cursor: pointer;
+  color: white;
+}
+
+@media all and (max-width: 520px) {
+/* CSS rules here for screens lower than 750px */
+header{
+  text-align: center;
+  font-size: 30px;
+  padding: 0px;
+  top:1px;
+  /* position: absolute; */
+}
+  .appTitle{
+    position: absolute;
+    width: 200px;
+    left: 3%;
+    /*  */
+    /* padding: 10px; */
+  }
+  .todoListMain .header {
+    position: absolute;
+    padding: 10px;
+    font-size: 16px;
+    left:3%;
+    top:100px;
+  }
+  .todoListMain .theList{
+    position: absolute;
+    padding: 10px;
+    font-size: 16px;
+    left:3%;
+    top:200px;
+  }
+}
+</style><script type="text/javascript" charset="utf-8" src="./localhost_files/0.312eacb2b3c6087bee25.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.e5d721d085954c0393f2.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.8aa826e2f8f315e592f4.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.96c337067f060f00d0c3.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.c30007e49ca97c929027.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.c2bd2c88d9d7c16e52d7.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.08514d3bb5109a4a1208.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.b5a66dff900a6472ef56.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.3cf594b6e7165a03a359.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.bdf8b60839b9d37623eb.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.d4251ed3ff176d06bd78.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.3765b05fc8f66f644ecb.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.13ca012f1fb1a8c74957.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.2de5c8bac2f834148652.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.05bac4e8aac477954c5d.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.2514c13f961740137bfc.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.eb21df0deac5bf027a9a.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.e7fbb1813849d60adb3d.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.259c36e664ca4ed31862.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.917e949756487cbc4afd.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.bb1d27ac3ce5c543f540.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.be8b93512b40b22ac57b.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.38fbedae277ca61509da.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.89835b9a2647adc6caaa.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.21d34a003460be288fa3.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.d2d4ea60ebcc5fbd2c91.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.3b5d430025c4b178b515.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.ee0c86401da34c4bd669.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.f9d5f359166550807f0d.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.7a161cd2e5bb4cf56ea0.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.37be680cbc04e11920c9.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.fa7bcdc5c870acc0f43c.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.617bc2f05951e5808379.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.4d128f406ce4c3bb42b8.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.4a820e24064af20e8e4a.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./localhost_files/0.51ba4a76fc3373479487.hot-update.js"></script></head>
+  <body data-gr-c-s-loaded="true" style="zoom: 1;">
+    <div id="container"><div><header><h1 class="appTitle" style="
+    display: block;
+">To Do</h1></header><div class="todoListMain"><div class="header"><form><input placeholder="enter task"><button type="submit">add</button></form></div><ul class="theList"><div style="position: relative;"><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="dd" style=""><span class="itemText">dd</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li><li value="d" style=""><span class="itemText">d</span><img src="./localhost_files/minusButton.54a6162f.png" class="deleteImg"></li></div></ul></div></div></div>
+  <script type="text/javascript" src="./localhost_files/bundle.js"></script><mytubeelement id="myTubeRelayElementToPage" event="preferencesUpdated" data="{&quot;bundle&quot;:{&quot;label_delimitor&quot;:&quot;:&quot;,&quot;percentage&quot;:&quot;%&quot;,&quot;smart_buffer&quot;:&quot;Smart Buffer&quot;,&quot;start_playing_when_buffered&quot;:&quot;Start playing when buffered&quot;,&quot;sound&quot;:&quot;Sound&quot;,&quot;desktop_notification&quot;:&quot;Desktop Notification&quot;,&quot;continuation_on_next_line&quot;:&quot;-&quot;,&quot;loop&quot;:&quot;Loop&quot;,&quot;only_notify&quot;:&quot;Only Notify&quot;,&quot;estimated_time&quot;:&quot;Estimated Time&quot;,&quot;global_preferences&quot;:&quot;Global Preferences&quot;,&quot;no_notification_supported_on_your_browser&quot;:&quot;No notification style supported on your browser version&quot;,&quot;video_buffered&quot;:&quot;Video Buffered&quot;,&quot;buffered&quot;:&quot;Buffered&quot;,&quot;hyphen&quot;:&quot;-&quot;,&quot;buffered_message&quot;:&quot;The video has been buffered as requested and is ready to play.&quot;,&quot;not_supported&quot;:&quot;Not Supported&quot;,&quot;on&quot;:&quot;On&quot;,&quot;off&quot;:&quot;Off&quot;,&quot;click_to_enable_for_this_site&quot;:&quot;Click to enable for this site&quot;,&quot;desktop_notification_denied&quot;:&quot;You have denied permission for desktop notification for this site&quot;,&quot;notification_status_delimitor&quot;:&quot;;&quot;,&quot;error&quot;:&quot;Error&quot;,&quot;adblock_interferance_message&quot;:&quot;Adblock (or similar extension) is known to interfere with SmartVideo. Please add this url to adblock whitelist.&quot;,&quot;calculating&quot;:&quot;Calculating&quot;,&quot;waiting&quot;:&quot;Waiting&quot;,&quot;will_start_buffering_when_initialized&quot;:&quot;Will start buffering when initialized&quot;,&quot;will_start_playing_when_initialized&quot;:&quot;Will start playing when initialized&quot;,&quot;completed&quot;:&quot;Completed&quot;,&quot;buffering_stalled&quot;:&quot;Buffering is stalled. Will stop.&quot;,&quot;stopped&quot;:&quot;Stopped&quot;,&quot;hr&quot;:&quot;Hr&quot;,&quot;min&quot;:&quot;Min&quot;,&quot;sec&quot;:&quot;Sec&quot;,&quot;any_moment&quot;:&quot;Any Moment&quot;,&quot;popup_donate_to&quot;:&quot;Donate to&quot;,&quot;extension_id&quot;:&quot;lnkdbjbjpnpjeciipoaflmpcddinpjjp&quot;},&quot;prefs&quot;:{&quot;desktopNotification&quot;:true,&quot;soundNotification&quot;:true,&quot;logLevel&quot;:0,&quot;enable&quot;:true,&quot;loop&quot;:false,&quot;hidePopup&quot;:false,&quot;autoPlay&quot;:false,&quot;autoBuffer&quot;:false,&quot;autoPlayOnBuffer&quot;:false,&quot;autoPlayOnBufferPercentage&quot;:42,&quot;autoPlayOnSmartBuffer&quot;:true,&quot;quality&quot;:&quot;default&quot;,&quot;fshd&quot;:false,&quot;onlyNotification&quot;:false,&quot;enableFullScreen&quot;:true,&quot;saveBandwidth&quot;:false,&quot;hideAnnotations&quot;:false,&quot;turnOffPagedBuffering&quot;:false}}"></mytubeelement><mytubeelement id="myTubeRelayElementToTab" event="relayPrefs" data="{&quot;loadBundle&quot;:true}"></mytubeelement>
+
+</body></html>
