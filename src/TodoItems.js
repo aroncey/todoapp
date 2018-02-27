@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FlipMove from "react-flip-move";
-import deleteImg from "./assets/minusButton.png"
+import deleteImg from "./assets/black-cross.png"
 class TodoItems extends Component {
   constructor(props,context){
     super(props,context);
@@ -10,12 +10,15 @@ class TodoItems extends Component {
 
 
 
+
 createTasks(item){
   return <li
     key={item.key}
     value={item.text}>
     <span className="itemText" onClick={() => this.update(item.key)}>{item.text}</span>
     {/* <input className="updateInput" value={this.state.term} onChange></input> */}
+    <br/>
+    <span className="itemDate"><i>Date: </i>{item.date_created}</span>
     <img onClick={()=> this.delete(item.key)} src={deleteImg} className="deleteImg"/>
   </li>
 }
@@ -27,6 +30,7 @@ delete(key){
 update(key){
   this.props.update(key);
 }
+
 
 
   render (){

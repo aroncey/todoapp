@@ -10,6 +10,7 @@ class TodoList extends Component {
       items: []
     };
 
+
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.updateItem = this.updateItem.bind(this);
@@ -18,14 +19,15 @@ class TodoList extends Component {
 
 
   addItem(e){
-    var todayDate = new Date(Date.now()).toLocaleString();
-    var itemArray = this.state.items;
+    let todayDate = new Date(Date.now()).toLocaleString();
+    let itemArray = this.state.items;
 
     if(this._inputElement.value !== ""){
       itemArray.push({
         text: this._inputElement.value,
         key: Date.now(),
-        Date: todayDate
+        date_created: todayDate,
+        date_modified: ""
       });
 
       this.setState({
@@ -41,58 +43,22 @@ class TodoList extends Component {
   };
 
   updateItem(key){
+    console.log("updateTask function launched");
+
     //1.pick location of edit form:
     //2. html for form
     //3. modification of element in itemArray
     //4. setState with new variable containing modified array
-      // var itemArray = this.state.items;
-      // var valueOfTask = "Please Edit Value of Task";
-      // var updateditem, newInput;
-      //
-      // //---- second attemp ---
-      // var  valueInputPrompt = () => {
-      //         var value = prompt('Please Edit the task',valueOfTask);
-      //         if (value != null && value != "") {
-      //           newInput = value;
-      //         };
-      //       }
-      // for(var i=0;itemArray.length>i ;i++){
-      //   itemArray;
-      //   var tempObj = {};
-      //   if(itemArray[i].key === key){
-      //     itemArray[i]
-      //     tempObj = itemArray[i]
-      //   }
-      // }
-
-    // function valueInputPrompt() {
-    //         var value = prompt('Please Edit the task',valueOfTask);
-    //         if (value != null && value != "") {
-    //           newInput = value;
-    //         }
-    //         console.log(newInput);
-    //     }
-
-    //check if the new name is not empty
-      // if(newInput !== ""){
-      // };
-
-      //find the obj in itemArray
-      //replace text value of that obj with newinput
-      //exit function
-
-        // ---- first attempt ----
-        // ItemsArrayState.forEach(function(item){
-        //   if(item.key === key){
-        //     console.log(this.state.items)
-        //     ItemsArrayState[item].text = newInput;
-        //   };
-        // });
-/*
-    this.state.items.forEach(function(item){
-      if(key === item.key){
-        debugger
+        var filteredItems, i, j;
+        var valueOfTask = "Please enter new Value of Task";
+        const items = this.state.items;
         var newInput = "";
+        for(j=0;j<items.length;j++){
+          if(key === items[j].key){
+             valueOfTask = items[j].text;
+          }
+        }
+
         var  valueInputPrompt = () => {
                 var value = prompt('Please Edit the task',valueOfTask);
                 if (value != null && value != "") {
@@ -101,16 +67,18 @@ class TodoList extends Component {
                 console.log(newInput);
             }
         valueInputPrompt()
-      }
-    })
 
-        console.log(ItemsArrayState)
-        console.log(this.state)
-*/
 
-      // this.setState({
-      //   items: itemArray
-      // });
+        for(i=0;i<items.length;i++){
+          if(key === items[i].key){
+            items[i].text = newInput;
+          }
+        }
+        filteredItems = items;
+
+        this.setState({
+          items: filteredItems
+        });
   };
 
   deleteItem(key){
@@ -121,8 +89,6 @@ class TodoList extends Component {
       items: filteredItems
     });
   };
-
-
 
   render(){
     return (

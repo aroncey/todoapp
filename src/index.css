@@ -19,25 +19,3 @@ body{
   top: 0%;
   background-color: #66CCFF;
 }
-
-li{
-  z-index: 5;
-}
-
-.deleteImg {
-  position: absolute;
-  height: 14px;
-  left: 90%;
-  z-index: 5;
-}
-
-/* .editLi{
-  position: absolute;
-  height: 14px;
-  left: 70%;
-  z-index: 10;
-} */
-
-.itemText:hover{
-  color:red;
-}
