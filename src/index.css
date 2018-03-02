@@ -1,12 +1,28 @@
 body {
   padding: 50px;
-  background-color: #66CCFF;
+  background-color: #3354FF;
   font-family: sans-serif;
+  margin: auto;
+  width: 50%;
 }
-#container {
+.appTitle{
+  z-index: 10;
+  background-color: #3354FF;
+  color: white;
+}
+#container{
   display: flex;
   justify-content: center;
+  top: 65px;
 }
+
+ h1{
+  margin: 0px !important;
+  width: 300px;
+  position: fixed;
+  z-index: 11;
+  top: 0%;
+  background-color: #3354FF;
 
 li{
   z-index: 5;
@@ -18,14 +34,10 @@ li{
   left: 90%;
   z-index: 5;
 }
-
-.editLi{
-  position: absolute;
-  height: 14px;
-  left: 70%;
-  z-index: 10;
+#tooltip{
+  font-size: 10px;
 }
 
-.itemText:hover{
-  color:red;
+#newInputForm{
+  display: block;
 }
