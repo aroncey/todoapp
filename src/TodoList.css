@@ -10,15 +10,12 @@
   top: 37px;
 }
 .todoListMain .header input {
-  position: inherit;
   padding: 10px;
   font-size: 16px;
   border: 2px solid #FFF;
   width: 240px;
 }
-
-.todoListMain .header button{
-  position: inherit;
+.todoListMain .header button {
   padding: 10px;
   font-size: 16px;
   margin: 10px;
@@ -27,14 +24,12 @@
   color: white;
   border: 2px solid #E35D02;
 }
-
-.todoListMain .header button:hover{
+.todoListMain .header button:hover {
   background-color: #003399;
   border: 2px solid #003399;
   cursor: pointer;
 }
-
-.todoListMain .theList{
+.todoListMain .theList {
   list-style: none;
   padding-left: 0;
   width: 300px;
@@ -75,4 +70,12 @@
 .itemDate{
   position: absolute;
   margin-top: 10px;
+  width: 250px;
+}
+.todoListMain .theList li {
+  color: #333;
+  background-color: rgba(255,255,255,.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }

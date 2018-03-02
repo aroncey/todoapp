@@ -1,4 +1,4 @@
-body{
+body {
   padding: 50px;
   background-color: #3354FF;
   font-family: sans-serif;
@@ -15,6 +15,7 @@ body{
   justify-content: center;
   top: 65px;
 }
+
  h1{
   margin: 0px !important;
   width: 300px;
@@ -22,6 +23,16 @@ body{
   z-index: 11;
   top: 0%;
   background-color: #3354FF;
+
+li{
+  z-index: 5;
+}
+
+.deleteImg {
+  position: absolute;
+  height: 14px;
+  left: 90%;
+  z-index: 5;
 }
 #tooltip{
   font-size: 10px;
