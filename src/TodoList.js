@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
-import "./TodoList.css"
+import {Tooltip, OverlayTrigger} from 'react-bootstrap';
+import "./TodoList.css";
 
 class TodoList extends Component {
   constructor(props,context){
@@ -10,11 +11,11 @@ class TodoList extends Component {
       items: []
     };
 
-
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.updateItem = this.updateItem.bind(this);
-    //this.handleClick =this.handleClick.bind(this);
+    this.updateItemVisually = this.updateItemVisually.bind(this);
+    this.manageEditForm = this.manageEditForm.bind(this);
 }
 
 
@@ -50,35 +51,52 @@ class TodoList extends Component {
     //3. modification of element in itemArray
     //4. setState with new variable containing modified array
         var filteredItems, i, j;
+        var items = this.state.items;
+
+        //----- Edit Pan Logic -----
         var valueOfTask = "Please enter new Value of Task";
-        const items = this.state.items;
         var newInput = "";
         for(j=0;j<items.length;j++){
           if(key === items[j].key){
              valueOfTask = items[j].text;
-          }
-        }
+          };
+        };
 
+        //----- Prompt -----
         var  valueInputPrompt = () => {
-                var value = prompt('Please Edit the task',valueOfTask);
+                var value = prompt('Please Edit the task Name',valueOfTask);
                 if (value != null && value != "") {
                   newInput = value;
-                }
-                console.log(newInput);
-            }
+                };
+            };
         valueInputPrompt()
 
-
+        //----- Editing items object & Setting new State -----
         for(i=0;i<items.length;i++){
-          if(key === items[i].key){
+          if(key === items[i].key && newInput !== ""){
             items[i].text = newInput;
-          }
-        }
+          };
+        };
         filteredItems = items;
 
         this.setState({
           items: filteredItems
         });
+  };
+  manageEditForm(key){
+  }
+  updateItemVisually(key){
+    var items = this.state.items;
+    var itemTxt, j;
+    for(j=0;j<items.length;j++){
+      if(key === items[j].key){
+        itemTxt = items[j].text
+        var selector = "li[value="+itemTxt+"] > .itemText";
+        var locationItemText = document.querySelector(selector);
+        var x = "<form id='newInputForm' onSubmit="+this.manageEditForm(key)+"><input placeholder='enter task'></input><button type='submit'>add</button></form>";
+        locationItemText.outerHTML = x;
+      };
+    };
   };
 
   deleteItem(key){
@@ -100,12 +118,12 @@ class TodoList extends Component {
             <button type="submit">add</button>
           </form>
         </div>
-          <TodoItems entries={this.state.items}
-                    delete={this.deleteItem}
-                    update={this.updateItem} />
+          <TodoItems  entries={this.state.items}
+                      delete={this.deleteItem}
+                      update={this.updateItem} />
       </div>
     );
-  }
-}
+  };
+};
 
 export default TodoList;
